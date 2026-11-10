@@ -67,8 +67,3 @@ The supplied documents describe manufacture and installation of the prototype an
 ## Project status
 
 This is a design and prototype documentation archive. The original 33 project files are preserved with their supplied filenames and folder structure. No standalone control software or automated test suite was supplied.
-
-## License
-
-No project license was included in the supplied folder. This repository does not add a license or grant reuse rights beyond those provided by the rights holders.
-
