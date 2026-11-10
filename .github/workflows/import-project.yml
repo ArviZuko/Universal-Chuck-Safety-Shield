@@ -1,0 +1,67 @@
+name: Upload project files with Git LFS
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/import-project.yml]
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import and verify all project files
+        shell: python
+        run: |
+          import hashlib, json, os, pathlib, shutil, subprocess, zipfile
+          root = pathlib.Path.cwd()
+          archive_path = pathlib.Path(os.environ["RUNNER_TEMP"]) / "universal-chuck-project.zip"
+          def run(*args):
+              subprocess.run(args, check=True)
+          def digest(path):
+              with open(path, "rb") as stream:
+                  return hashlib.file_digest(stream, "sha256").hexdigest()
+          run("curl", "--fail", "--location", "--retry", "5", "--connect-timeout", "30", "--speed-time", "60", "--speed-limit", "1024", "--max-time", "1200", "-o", str(archive_path), "https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/project-files-v1/universal-chuck-project.zip")
+          assert archive_path.stat().st_size == 699649559
+          assert digest(archive_path) == "dbad5a7ed0b468afe678eb1068467b442cab6e7b8bbb247af24f0350ca5411d4"
+          with zipfile.ZipFile(archive_path) as archive:
+              manifest = json.loads(archive.read("upload-manifest.json"))
+              assert len(manifest) == 33
+              expected = {entry["path"] for entry in manifest} | {"README.md", ".gitignore", "upload-manifest.json"}
+              assert set(archive.namelist()) == expected
+              for name in sorted(expected - {"upload-manifest.json"}):
+                  relative = pathlib.PurePosixPath(name)
+                  assert not relative.is_absolute() and ".." not in relative.parts and ".git" not in relative.parts
+                  destination = root.joinpath(*relative.parts)
+                  assert not destination.exists() or name == "README.md", name
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  with archive.open(name) as source, open(destination, "wb") as output:
+                      shutil.copyfileobj(source, output)
+          archive_path.unlink()
+          for entry in manifest:
+              path = root / entry["path"]
+              assert path.stat().st_size == entry["size"] and digest(path) == entry["sha256"], entry["path"]
+          print("All 33 original files match local size and SHA-256 checksums", flush=True)
+          run("git", "lfs", "install", "--local")
+          large = [entry for entry in manifest if entry["size"] >= 50 * 1024 * 1024]
+          assert len(large) == 5
+          for entry in large:
+              run("git", "lfs", "track", entry["path"])
+          paths = [entry["path"] for entry in manifest] + ["README.md", ".gitignore", ".gitattributes"]
+          run("git", "add", "-f", "--", *paths)
+          for entry in manifest:
+              staged = subprocess.check_output(["git", "show", ":" + entry["path"]])
+              if entry in large:
+                  expected = "version https://git-lfs.github.com/spec/v1\noid sha256:" + entry["sha256"] + "\nsize " + str(entry["size"]) + "\n"
+                  assert staged.decode() == expected, entry["path"]
+              else:
+                  assert hashlib.sha256(staged).hexdigest() == entry["sha256"], entry["path"]
+          run("git", "rm", ".github/workflows/import-project.yml")
+          run("git", "config", "user.name", "github-actions[bot]")
+          run("git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+          run("git", "commit", "--quiet", "-m", "Upload all 33 project files with large documents and videos in Git LFS")
+          run("git", "push", "origin", "HEAD:main")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write("Uploaded all 33 original files with SHA-256 verification, preserving every original path. Five large documents/videos use Git LFS. Added the project README and removed this temporary workflow.\n")
+          
