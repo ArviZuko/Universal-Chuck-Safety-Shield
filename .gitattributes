@@ -1,0 +1,5 @@
+Documentation/Presentation.pptx filter=lfs diff=lfs merge=lfs -text
+Documentation/Report.docx filter=lfs diff=lfs merge=lfs -text
+Documentation/Video.mp4 filter=lfs diff=lfs merge=lfs -text
+Videos/Media1.mp4 filter=lfs diff=lfs merge=lfs -text
+Videos/Media2.mp4 filter=lfs diff=lfs merge=lfs -text
