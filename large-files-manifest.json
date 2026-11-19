@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "path": "Documentation/Presentation.pptx",
+      "size": 289350506,
+      "sha256": "c470c6e097ef7d1a51e1590875468ef762e26f2acfb519a8007b46d833604250",
+      "parts": [
+        {
+          "url": "https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Presentation.pptx",
+          "size": 289350506,
+          "sha256": "c470c6e097ef7d1a51e1590875468ef762e26f2acfb519a8007b46d833604250",
+          "name": "Presentation.pptx"
+        }
+      ]
+    },
+    {
+      "path": "Videos/Media1.mp4",
+      "size": 106316698,
+      "sha256": "b9d99a4d74dbf65c029e39de3bf76f110e24b3268eac335a14538cb958dd42c8",
+      "parts": [
+        {
+          "url": "https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Media1.mp4",
+          "size": 106316698,
+          "sha256": "b9d99a4d74dbf65c029e39de3bf76f110e24b3268eac335a14538cb958dd42c8",
+          "name": "Media1.mp4"
+        }
+      ]
+    },
+    {
+      "path": "Videos/Media2.mp4",
+      "size": 120140087,
+      "sha256": "09309bb7c2b8c3e5df1c3178baea0bd3a7d9639cd8f8b159a2eec06d7a34ad7d",
+      "parts": [
+        {
+          "url": "https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Media2.mp4",
+          "size": 120140087,
+          "sha256": "09309bb7c2b8c3e5df1c3178baea0bd3a7d9639cd8f8b159a2eec06d7a34ad7d",
+          "name": "Media2.mp4"
+        }
+      ]
+    }
+  ]
+}
