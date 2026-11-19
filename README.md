@@ -38,10 +38,10 @@ The report describes approximately 110 degrees of installed opening travel, whil
 ### Documents and demonstrations
 
 - [Project report](Documentation/Report.docx) — *Retrofit Safety Solutions: Risk Mitigation in Lathe Machining via a Universal Chuck Shield for Frequency Conversion Systems*
-- [Presentation](Documentation/Presentation.pptx) — design considerations, drawings, components, prototype, and demonstrations
+- [Presentation](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Presentation.pptx) — design considerations, drawings, components, prototype, and demonstrations
 - [Project video](Documentation/Video.mp4)
-- [Media 1](Videos/Media1.mp4)
-- [Media 2](Videos/Media2.mp4)
+- [Media 1](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Media1.mp4)
+- [Media 2](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Media2.mp4)
 - [Media 3](Videos/Media3.mp4)
 - [Prototype photograph](Images/20220908_100432.jpg)
 
