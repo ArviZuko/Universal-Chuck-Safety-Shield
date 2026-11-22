@@ -1,5 +1,7 @@
 # Universal Chuck Safety Shield
 
+**[Download the complete project (ZIP)](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Universal-Chuck-Safety-Shield-complete.zip)**
+
 A mechanical retrofit project for a lathe chuck shield that mounts to the tool post, helps redirect machining chips toward the collection area, and retains a view of the workpiece through transparent panels.
 
 This repository preserves the supplied CAD exports, manufacturing drawings, prototype photographs, demonstration videos, project report, and presentation. The report describes a prototype fitted to an ST-34 lathe; the design is intended to be adaptable, with dimensions and clearances adjusted for each machine.
@@ -45,7 +47,7 @@ The report describes approximately 110 degrees of installed opening travel, whil
 
 ## Viewing and downloading
 
-The presentation and two demo clips are available from [GitHub Releases](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/tag/large-files-no-lfs). To restore the original folder layout locally, save `Presentation.pptx` in `Documentation/` and save `Media1.mp4` and `Media2.mp4` in `Videos/`.
+The [complete project ZIP](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/download/large-files-no-lfs/Universal-Chuck-Safety-Shield-complete.zip) includes the CAD files, drawings, report, presentation, photos, videos, and license in their original folders. The presentation and two demo clips are also available individually from [GitHub Releases](https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/releases/tag/large-files-no-lfs). To restore the original folder layout locally, save `Presentation.pptx` in `Documentation/` and save `Media1.mp4` and `Media2.mp4` in `Videos/`.
 
 Use a STEP-compatible CAD application for the `.stp` models, a DWG viewer or compatible CAD application for the drawing views, and a PDF viewer for the manufacturing drawings. The report and presentation can be opened with compatible office software, and the videos with an MP4-capable player. The report identifies KeyCreator as the original CAD design tool; the repository contains the supplied STEP/DWG exports.
 
