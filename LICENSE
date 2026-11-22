@@ -1,0 +1,48 @@
+Universal Chuck Safety Shield
+Attribution and Noncommercial License Terms
+
+These terms apply only to material the project rights holders own or are
+authorized to license. Third-party material remains subject to its own terms.
+
+Documentation and media
+
+The project's original report, presentation, photographs, videos, and README,
+including copies distributed through GitHub Releases, are licensed under the
+Creative Commons Attribution-NonCommercial 4.0 International Public License.
+The full license is available at:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode.en
+
+Hardware design
+
+The following custom terms apply to the project files in "3D Design" and
+"Drafting", including the CAD models and manufacturing drawings.
+
+To the extent the project rights holders control the applicable rights, they
+grant you a nonexclusive, worldwide, royalty-free license to use, copy,
+modify, and share the design files, and to make and use physical shields
+from them, solely for noncommercial purposes and subject to these terms.
+
+Noncommercial means not primarily intended for or directed toward commercial
+advantage or monetary compensation. Manufacturing shields for sale or other
+commercial distribution, selling shields made from the design, and using
+the design or shields for commercial advantage require prior written
+permission from the applicable rights holders.
+
+When sharing the design files or adaptations, or giving someone a shield
+made from the design, include the credit below in accompanying material.
+Retain any existing attribution and copyright notices, identify any changes
+you made, and include a copy of or link to these license terms.
+
+Suggested credit:
+Universal Chuck Safety Shield by ArviZuko and the credited contributors.
+Source: https://github.com/ArviZuko/Universal-Chuck-Safety-Shield
+License: https://github.com/ArviZuko/Universal-Chuck-Safety-Shield/blob/main/LICENSE
+
+All rights not expressly granted are reserved. These terms do not restrict
+activities that applicable law permits without the rights holders' permission.
+
+To the extent permitted by law, the hardware design is provided as is,
+without warranties, including warranties of merchantability, fitness for
+a particular purpose, noninfringement, or safety. To the extent permitted by
+law, the rights holders are not liable for claims, damages, or other losses
+arising from use of the design or hardware made from it.
